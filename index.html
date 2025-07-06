@@ -3,49 +3,100 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Chrome Homepage</title>
+  <title>DR1 Homepage</title>
   <style>
+    :root {
+      --bg-image: url('https://your-image-url.com/bg.jpg'); /* Change this */
+    }
+
     body {
       margin: 0;
       padding: 0;
-      background: #1e1e1e;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg-image) no-repeat center center fixed;
+      background-size: cover;
       color: white;
-      font-family: sans-serif;
       text-align: center;
+      backdrop-filter: brightness(0.6) blur(2px);
     }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+    }
+
     .search-container {
       margin-top: 20vh;
     }
+
     input[type="text"] {
-      padding: 12px;
+      padding: 14px 20px;
       width: 80%;
-      max-width: 400px;
+      max-width: 500px;
       border: none;
       border-radius: 30px;
       font-size: 18px;
+      background-color: #2c2c2c;
+      color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
     }
+
     .apps {
-      margin-top: 30px;
+      margin-top: 40px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      gap: 25px;
     }
+
     .app {
       text-align: center;
+      width: 70px;
     }
+
     .app img {
-      width: 60px;
-      height: 60px;
+      width: 50px;
+      height: 50px;
       border-radius: 12px;
+      transition: transform 0.2s ease;
     }
+
+    .app img:hover {
+      transform: scale(1.1);
+    }
+
     .app p {
-      font-size: 14px;
-      margin-top: 5px;
+      font-size: 13px;
+      margin: 6px 0 0;
+      color: white;
+      text-decoration: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    @media screen and (max-width: 600px) {
+      .app {
+        width: 60px;
+      }
+      .app img {
+        width: 45px;
+        height: 45px;
+      }
+      .app p {
+        font-size: 12px;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="overlay"></div>
+  
   <div class="search-container">
     <form action="https://www.google.com/search" method="GET">
       <input type="text" name="q" placeholder="Search Google or type a URL" />
@@ -57,15 +108,22 @@
       <img src="https://www.google.com/s2/favicons?sz=64&domain=youtube.com" alt="YouTube">
       <p>YouTube</p>
     </a>
-    <a href="https://discord.com" class="app">
-      <img src="https://www.google.com/s2/favicons?sz=64&domain=discord.com" alt="Discord">
-      <p>Discord</p>
+    <a href="https://studio.youtube.com" class="app">
+      <img src="https://www.google.com/s2/favicons?sz=64&domain=studio.youtube.com" alt="YT Studio">
+      <p>YT Studio</p>
     </a>
-    <a href="https://mail.google.com" class="app">
-      <img src="https://www.google.com/s2/favicons?sz=64&domain=mail.google.com" alt="Gmail">
-      <p>Gmail</p>
+    <a href="https://www.amazon.in" class="app">
+      <img src="https://www.google.com/s2/favicons?sz=64&domain=amazon.in" alt="Amazon">
+      <p>Amazon</p>
     </a>
-    <!-- Add more apps as needed -->
+    <a href="https://www.remidernova.nichesite.org" class="app">
+      <img src="https://www.google.com/s2/favicons?sz=64&domain=remidernova.nichesite.org" alt="ReminderNova">
+      <p>ReminderNova</p>
+    </a>
+    <a href="https://dr1web.neocities.org" class="app">
+      <img src="https://www.google.com/s2/favicons?sz=64&domain=dr1web.neocities.org" alt="DR1 Web">
+      <p>DR1 Web</p>
+    </a>
   </div>
 </body>
 </html>
