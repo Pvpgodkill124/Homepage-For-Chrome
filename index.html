@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Chrome Homepage</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #1e1e1e;
+      color: white;
+      font-family: sans-serif;
+      text-align: center;
+    }
+    .search-container {
+      margin-top: 20vh;
+    }
+    input[type="text"] {
+      padding: 12px;
+      width: 80%;
+      max-width: 400px;
+      border: none;
+      border-radius: 30px;
+      font-size: 18px;
+    }
+    .apps {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .app {
+      text-align: center;
+    }
+    .app img {
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
+    }
+    .app p {
+      font-size: 14px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="search-container">
+    <form action="https://www.google.com/search" method="GET">
+      <input type="text" name="q" placeholder="Search Google or type a URL" />
+    </form>
+  </div>
+
+  <div class="apps">
+    <a href="https://www.youtube.com" class="app">
+      <img src="https://www.google.com/s2/favicons?sz=64&domain=youtube.com" alt="YouTube">
+      <p>YouTube</p>
+    </a>
+    <a href="https://discord.com" class="app">
+      <img src="https://www.google.com/s2/favicons?sz=64&domain=discord.com" alt="Discord">
+      <p>Discord</p>
+    </a>
+    <a href="https://mail.google.com" class="app">
+      <img src="https://www.google.com/s2/favicons?sz=64&domain=mail.google.com" alt="Gmail">
+      <p>Gmail</p>
+    </a>
+    <!-- Add more apps as needed -->
+  </div>
+</body>
+</html>
